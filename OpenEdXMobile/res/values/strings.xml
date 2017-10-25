@@ -372,8 +372,6 @@
     <string name="assessment_open_on_youtube">View video on YouTube</string>
 
     <!-- Video List -->
-    <!-- Label shown to indicate video currently downloading -->
-    <string name="started_downloading">Downloading</string>
     <!-- Title of video download screen -->
     <string name="title_download">Downloads</string>
 
