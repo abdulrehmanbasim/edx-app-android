@@ -723,18 +723,6 @@ public class IDatabaseImpl extends IDatabaseBaseImpl implements IDatabase {
         return enqueue(op);
     }
 
-    @Override
-    public List<String> getUniqueCourseIdsForDownloadedVideos(@Nullable final DataCallback<List<String>> callback) {
-        DbOperationGetColumn<String> op = new DbOperationGetColumn<String>(true,
-                DbStructure.Table.DOWNLOADS,
-                new String[]{DbStructure.Column.EID},
-                DbStructure.Column.USERNAME + "=? AND " + DbStructure.Column.DOWNLOADED + "=?",
-                new String[]{username(), String.valueOf(DownloadedState.DOWNLOADED.ordinal())},
-                null, String.class);
-        op.setCallback(callback);
-        return enqueue(op);
-    }
-
     /**
      * update assessment unit access record
      */
