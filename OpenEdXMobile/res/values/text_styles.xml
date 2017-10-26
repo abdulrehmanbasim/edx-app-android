@@ -71,26 +71,6 @@
         <item name="android:layout_width">match_parent</item>
     </style>
 
-    <style name="offline_access_header" parent="@style/bold_white_text">
-        <item name="android:gravity">center</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-    </style>
-
-    <style name="offline_access_message" parent="@style/regular_white_text">
-        <item name="android:gravity">center</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
-    </style>
-
     <style name="content_unavailable_layout">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

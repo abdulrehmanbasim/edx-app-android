@@ -1246,65 +1246,6 @@ public class DbTests extends BaseTestCase {
     }
 
     @Test
-    public void testgetDownloadedVideosSizeByCourse() throws Exception {
-        db.clearDataByUser(username);
-        String courseId = "courseId";
-        db.getDownloadedVideosSizeByCourse(courseId, new DataCallback<Long>() {
-
-            @Override
-            public void onResult(Long result) {
-                print( "Result for get Downloaded Videos SizeByCourse for 0 is:"+ result);
-                assertNotNull(result);
-                //assertTrue(result >= 0);
-                assertTrue(result==0);
-                // assertFalse("something is downloading", result);
-                unlock();
-
-            }
-
-            @Override
-            public void onFail(Exception ex) {
-
-                fail(ex.getMessage());
-
-            }
-        });
-        lock();
-
-        DownloadEntry de=getDummyVideoModel();
-        de.eid = courseId;
-        de.downloaded=DownloadedState.DOWNLOADED;
-        de.size = 20000;
-        db.addVideoData(de, null);
-
-        de=getDummyVideoModel();
-        de.eid = courseId;
-        de.downloaded=DownloadedState.DOWNLOADED;
-        de.size = 2200;
-        db.addVideoData(de, null);
-
-        db.getDownloadedVideosSizeByCourse(de.eid, new DataCallback<Long>() {
-
-            @Override
-            public void onResult(Long result) {
-                assertNotNull(result);
-                assertTrue("found result=" + result, result == 22200);
-                // assertFalse("something is downloading", result);
-                print( "result for get Downloaded Videos SizeByCourse for more than 0:"+ result);
-                unlock();
-
-            }
-
-            @Override
-            public void onFail(Exception ex) {
-
-                fail(ex.getMessage());
-
-            }
-        });
-        lock();
-    }
-    @Test
     public void testgetIVideoModelByVideoUrl() throws Exception {
         db.clearDataByUser(username);
         final String videoUrl ="url";

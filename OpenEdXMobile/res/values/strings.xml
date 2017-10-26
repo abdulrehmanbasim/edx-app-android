@@ -180,8 +180,6 @@
     <string name="announcement_subtitle">Keep up with the latest news</string>
     <!-- Subtitle text describing the important dates section on the course dashboard -->
     <string name="course_dates_subtitle">Keep track of deadlines and stay on track</string>
-    <!-- Accessible content description of school code label a course -->
-    <string name="school_code">School Code</string>
     <!-- Accessible content description of course name label field -->
     <string name="course_name">Course Name</string>
     <!-- Label indicating new course content has been downloaded -->
@@ -375,11 +373,6 @@
     <!-- Title of video download screen -->
     <string name="title_download">Downloads</string>
 
-    <!-- MyVideos -->
-    <!-- Title of all videos section -->
-    <string name="my_all_videos">All Videos</string>
-    <!-- Title of recent videos section -->
-    <string name="my_recent_videos">Recent Videos</string>
     <!-- Label indicating user has no Internet connection -->
     <string name="offline_text">Offline</string>
     <!-- Cancel video download -->

@@ -525,22 +525,6 @@ public class IDatabaseImpl extends IDatabaseBaseImpl implements IDatabase {
     }
 
     @Override
-    public Long getDownloadedVideosSizeByCourse(String courseId,
-                                                final DataCallback<Long> callback) {
-        String sqlQuery = "SELECT SUM(" + DbStructure.Column.SIZE + ") FROM "
-                + DbStructure.Table.DOWNLOADS + " WHERE "
-                + DbStructure.Column.EID + "=? AND "
-                + DbStructure.Column.USERNAME + "=? AND "
-                + DbStructure.Column.DOWNLOADED + "=?";
-        DbOperationSingleValueByRawQuery<Long> op = new DbOperationSingleValueByRawQuery<Long>(
-                sqlQuery,
-                new String[]{courseId, username(),
-                        String.valueOf(DownloadedState.DOWNLOADED.ordinal())}, Long.class);
-        op.setCallback(callback);
-        return enqueue(op);
-    }
-
-    @Override
     public VideoModel getIVideoModelByVideoUrl(String videoUrl,
                                                final DataCallback<VideoModel> callback) {
         DbOperationGetVideo op = new DbOperationGetVideo(false, DbStructure.Table.DOWNLOADS, null,

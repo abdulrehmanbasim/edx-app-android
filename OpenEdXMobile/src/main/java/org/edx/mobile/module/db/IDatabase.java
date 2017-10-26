@@ -333,15 +333,6 @@ public interface IDatabase {
      */
     Integer getVideosDownloadedCount(DataCallback<Integer> callback);
 
-
-    /**
-     * Returns Size in bytes of Downloaded Videos in the Course by Course ID
-     *
-     * @param courseId
-     * @param callback
-     */
-    Long getDownloadedVideosSizeByCourse(String courseId, DataCallback<Long> callback);
-
     /**
      * Returns IVideoModel object if entry exists with Video status set as
      * downloaded with the given URL
