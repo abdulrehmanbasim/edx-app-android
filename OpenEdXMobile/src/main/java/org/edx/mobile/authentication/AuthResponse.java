@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * This class represents response of Authentication call to server.
- * 
+ * JUST A COMMENT
  */
 public class AuthResponse implements Serializable {
 
