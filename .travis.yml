@@ -41,7 +41,7 @@ script:
   - adb shell input keyevent 82 &
   - travis_wait make e2e
   # Script to print lint information in logs.
-  - ./gradlew lintProdDebug --info
+  - ./gradlew clean lintProdDebug --info
 
 after_script:
   - make artifacts
