@@ -1,0 +1,12 @@
+API_HOST_URL: 'http://staging.philanthropyu.org' # localhost is 10.0.2.2 in Android
+ENVIRONMENT_DISPLAY_NAME: 'PhilU'
+PLATFORM_NAME: 'Philanthropyu'
+PLATFORM_DESTINATION_NAME: 'philanthropyu.org'
+FEEDBACK_EMAIL_ADDRESS: 'abdul.rehman@arbisoft.com'
+DEBUG: true
+COURSE_ENROLLMENT:
+ TYPE: 'WEBVIEW'
+ WEBVIEW:
+  COURSE_SEARCH_URL: 'http://staging.philanthropyu.org/courses'
+  EXPLORE_SUBJECTS_URL: 'http://staging.philanthropyu.org/courses'
+  SEARCH_BAR_ENABLED: true
